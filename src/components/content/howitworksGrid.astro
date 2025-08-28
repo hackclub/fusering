@@ -1,0 +1,83 @@
+---
+const step1 = "/images/step1.png";
+const step2 = "/images/step2.png";
+const step3 = "/images/step3.jpg";
+const step4 = "/images/step4.jpg";
+---
+
+<div
+  class="z-2 h-fit lg:h-[90vh] flex-col md:flex-row flex items-center justify-center shadow-lg"
+>
+  <div
+    class="lg:h-[80vh] w-fit lg:w-[70vw] flex items-center justify-center flex-col rounded-4xl p-[2rem] md:m-[0rem]"
+  >
+    <!-- Grid for keyring images -->
+    <h1
+      class="w-full text-left mb-[2rem] text-white font-[Phantom_Sans] text-3xl"
+    >
+      How it works
+    </h1>
+
+    <div
+      class="flex flex-col lg:grid lg:grid-cols-5 lg:grid-rows-5 gap-[2rem] w-full h-full"
+    >
+      <!-- Step 1 -->
+      <div class="h-[25vh] md:h-auto md:col-span-2 md:row-span-2">
+        <h1
+          class="max-w-xs lg:max-w-lg absolute p-[1rem] text-left mb-[2rem] bg-horizon-500 text-horizon-50 rounded-2xl shadow-xl font-[Phantom_Sans] text-2xl"
+        >
+          Step 1: Prep your Logo
+        </h1>
+        <img
+          src={step1}
+          class="w-full h-full object-cover rounded-2xl p-[1rem] bg-horizon-500 shadow-2xl"
+        />
+      </div>
+
+      <!-- Step 2 -->
+      <div
+        class="h-[25vh] md:h-auto md:col-span-3 md:row-span-3 md:col-start-3"
+      >
+        <h1
+          class="max-w-xs lg:max-w-lg absolute p-[1rem] text-left mb-[2rem] bg-horizon-500 text-horizon-50 rounded-2xl shadow-xl font-[Phantom_Sans] text-2xl"
+        >
+          Step 2: Design your keyring using Fusion
+        </h1>
+        <img
+          src={step2}
+          class="w-full h-full object-cover rounded-2xl p-[1rem] bg-horizon-500 shadow-2xl"
+        />
+      </div>
+
+      <!-- Step 3 -->
+      <div
+        class="h-[25vh] md:h-auto md:col-span-2 md:row-span-3 md:row-start-3"
+      >
+        <h1
+          class="max-w-xs lg:max-w-s absolute p-[1rem] text-left mb-[2rem] bg-horizon-500 text-horizon-50 rounded-2xl shadow-xl font-[Phantom_Sans] text-2xl"
+        >
+          Step 3: Share your design, and we'll print it for you
+        </h1>
+        <img
+          src={step3}
+          class="w-full h-full object-cover rounded-2xl p-[1rem] bg-horizon-500 shadow-2xl"
+        />
+      </div>
+
+      <!-- Step 4 -->
+      <div
+        class="h-[25vh] md:h-auto md:col-span-3 md:row-span-2 md:col-start-3 md:row-start-4"
+      >
+        <h1
+          class="max-w-xs lg:max-w-lg absolute p-[1rem] text-left mb-[2rem] bg-horizon-500 text-horizon-50 rounded-2xl shadow-xl font-[Phantom_Sans] text-2xl"
+        >
+          Step 4: Enjoy your custom keyring!
+        </h1>
+        <img
+          src={step4}
+          class="w-full h-full object-cover rounded-2xl p-[1rem] bg-horizon-500 shadow-2xl"
+        />
+      </div>
+    </div>
+  </div>
+</div>

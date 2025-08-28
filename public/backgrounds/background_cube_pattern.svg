@@ -1,0 +1,15 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="1920" height="1080" fill="url(#pattern0_26_337)"/>
+<defs>
+<pattern id="pattern0_26_337" patternUnits="userSpaceOnUse" viewBox="-319 -688.502 280.52 154.498" width="14.610392252604168%" height="14.305360582139755%" x="889.87" y="462.751" patternContentUnits="objectBoundingBox">
+<g id="pattern0_26_337_inner">
+<rect width="140.26" height="154.498" transform="translate(-319 -843)" fill="#A75970"/>
+<path d="M-207.478 -787.562V-744.438C-207.478 -743.426 -208.026 -742.495 -208.91 -742.004L-247.887 -720.35C-248.728 -719.883 -249.751 -719.883 -250.591 -720.35L-289.568 -742.004C-290.452 -742.495 -291 -743.426 -291 -744.438L-291 -787.562C-291 -788.573 -290.452 -789.505 -289.568 -789.996L-250.591 -811.65C-249.751 -812.117 -248.728 -812.117 -247.887 -811.65L-208.91 -789.996C-208.027 -789.505 -207.478 -788.573 -207.478 -787.562Z" stroke="#A1566C" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-288.548 -787.838L-250.591 -766.751C-249.75 -766.284 -248.728 -766.284 -247.887 -766.751L-209.798 -787.912" stroke="#A1566C" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-249.239 -724.239V-766" stroke="#A1566C" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<use xlink:href="#pattern0_26_337_inner" transform="translate(0 154.498)"/>
+<use xlink:href="#pattern0_26_337_inner" transform="translate(140.26 77.2489)"/>
+<use xlink:href="#pattern0_26_337_inner" transform="translate(140.26 231.747)"/>
+</pattern></defs>
+</svg>

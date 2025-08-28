@@ -1,0 +1,33 @@
+---
+// Base layout imports frameworks, dependencies, and displays shared components across all pages i.e footer
+
+// Import tailwind framework
+import "../styles/global.css";
+
+// Import shared components
+import Head from "../components/shared/head.astro";
+import Footer from "../components/shared/footer.astro";
+import Hero from "../components/shared/hero.astro";
+import Navbar from "../components/shared/navbar.astro";
+
+// Import Hack Club Logo
+const hackclubLogo = "/logos/flag-orpheus-top.svg";
+---
+
+<html>
+  <Head />
+  <body class="bg-FuseringRedDark">
+
+    <img src={hackclubLogo} class="fixed flex top-0 left-0 w-[12rem] z-10">
+    <Hero/>
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+
+  <style>
+    body{
+      overflow-x: hidden;
+    }
+  </style>
+</html>
