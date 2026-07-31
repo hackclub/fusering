@@ -2,13 +2,95 @@
 import Default from "../layouts/default.astro";
 import Navigation from "../components/shared/content/navigation.astro";
 import Getstarted from "../components/shared/content/getstarted.astro";
+import { Image } from 'astro:assets';
+
+interface GalleryItem {
+  name: string;
+  imageUrl: string;
+  width?: number;
+  height?: number;
+}
+
+let galleryItems: GalleryItem[] = [];
+
+const AIRTABLE_API_KEY = import.meta.env.AIRTABLE_API_KEY;
+const AIRTABLE_BASE_ID = import.meta.env.AIRTABLE_BASE_ID;
+const AIRTABLE_TABLE_NAME = import.meta.env.AIRTABLE_TABLE_NAME || "Projects";
+
+if (AIRTABLE_API_KEY && AIRTABLE_BASE_ID) {
+  try {
+    const filterFormula = encodeURIComponent(`{Gallery Consent}=TRUE()`);
+    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}?filterByFormula=${filterFormula}`;
+
+    const response = await fetch(url, {
+      headers: { Authorization: `Bearer ${AIRTABLE_API_KEY}` },
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      galleryItems = (data.records as Record<string, any>[])
+        .map((record) => {
+          const attachments =
+            record.fields?.["Render"] || record.fields?.["Image"];
+          const attachment = Array.isArray(attachments)
+            ? attachments[0]
+            : attachments;
+          const imageUrl = attachment?.url ?? attachment;
+          return {
+            name: record.fields?.["Name"] ?? "Untitled Project",
+            imageUrl,
+            width: attachment?.width,
+            height: attachment?.height,
+          };
+        })
+        .filter((item) => item.imageUrl);
+    }
+  } catch (e) {
+    console.error("Failed to fetch gallery from Airtable:", e);
+  }
+}
+
+if (galleryItems.length === 0) { // fall back on /public
+  galleryItems = [
+    { name: "Gallery Preview 1", imageUrl: "/images/GalleryPreview1.webp" },
+    { name: "Gallery Preview 2", imageUrl: "/images/GalleryPreview2.webp" },
+    { name: "Gallery Preview 3", imageUrl: "/images/GalleryPreview3.webp" },
+    { name: "Gallery Preview 4", imageUrl: "/images/GalleryPreview4.webp" },
+    { name: "Gallery Preview 5", imageUrl: "/images/GalleryPreview5.webp" },
+    { name: "Gallery Preview 6", imageUrl: "/images/GalleryPreview6.webp" },
+    { name: "Gallery Preview 7", imageUrl: "/images/GalleryPreview7.webp" },
+    { name: "Gallery Preview 8", imageUrl: "/images/GalleryPreview8.webp" },
+  ];
+}
 ---
 
 <Default>
   <Navigation
-    text="Gallery: Coming soon to a fusering near you!"
-    tip="Check back in a couple of weeks to see everyone's creations!"
+    text="Gallery: See designs made by fellow Hack Clubbers!"
+    tip="Want to be featured here? Submit your project with gallery consent!"
   />
+
+  <div class="flex flex-col items-center px-[2rem] pb-[4rem]">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full max-w-7xl"
+    >
+      {
+        galleryItems.map((item) => (
+          <div class="bg-cadillac-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 aspect-square p-3 flex items-center justify-center">
+            <Image
+              src={item.imageUrl}
+              width={item.width}
+              height={item.height}
+              alt={`Fusering project: ${item.name}`}
+              class="w-full h-full object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
 
   <Getstarted />
 </Default>
