@@ -1,4 +1,0 @@
-{
-    // Disable Tailwind suggestion to canonicalize class names
-    "tailwindCSS.lint.suggestCanonicalClasses": "ignore"
-}
