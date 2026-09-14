@@ -24,4 +24,8 @@
   /* Neutral colours */
   --color-card-beige: #f1e5cf;
   --color-text-black: #292929;
+
+  /* Card shadow + radius ("sticker" style: flat offset, no blur) */
+  --shadow-card: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
+  --radius-card: 24px;
 }
