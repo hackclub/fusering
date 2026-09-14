@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+
+@plugin "daisyui";
+
+@theme {
+  /* Fonts */
+  --font-baloo-2: "Baloo 2", sans-serif;
+  --font-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+
+  /* Fusering brand colours */
+  --color-fusering-orange: #b85a33;
+  --color-fusering-pink: #ce8da0;
+  --color-fusering-blue: #a9c6d8;
+  --color-fusering-beige: #fbf2e2;
+
+  /* Icon colours */
+  --color-icon-blue: #a9c6d8;
+  --color-icon-orange: #f2ac7b;
+  --color-icon-pink: #ce8da0;
+  --color-icon-green: #acd9a1;
+
+  /* Neutral colours */
+  --color-card-beige: #f1e5cf;
+  --color-text-black: #292929;
+}
