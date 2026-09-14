@@ -1,0 +1,25 @@
+---
+import guideIcon from "../assets/guide_icon.png";
+import clubsIcon from "../assets/clubs_icon.png";
+import submitIcon from "../assets/submit_icon.png";
+
+const { type, label, path } = Astro.props;
+
+const icons = {
+  guide: guideIcon,
+  clubs: clubsIcon,
+  submit: submitIcon,
+};
+
+const icon = icons[type as keyof typeof icons];
+
+//text 3xl
+---
+
+<a
+  href={path}
+  class="flex flex-row p-4 rounded-full border-4 border-text-black items-center gap-8 hover:bg-fusering-blue hover:shadow-card"
+>
+  <p class="text-3xl font-semibold">{label}</p>
+  {icon && <img src={icon.src} />}
+</a>

@@ -1,10 +1,13 @@
 ---
 import "../styles/global.css";
 
-// images
+// Components
+import PillOne from "../components/pill_one.astro";
 
+// Images
 import hero_banner from "../assets/hero_banner.png";
 import logo from "../assets/logo.png";
+import sticker_arrow_cluster from "../assets/sticker_arrow_cluster.png";
 ---
 
 <html lang="en">
@@ -26,6 +29,22 @@ import logo from "../assets/logo.png";
     </div>
 
     <!--Main -->
-    <main class="min-h-screen flex flex-col gap-6 p-16"></main>
+    <main
+      class="min-h-screen flex flex-col gap-6 p-16 font-baloo-2 font-bold text-5xl"
+    >
+      <h1>Design a keyring, we'll ship it to you with stickers!</h1>
+      <div class="flex flex-row justify-between h-fit items-center">
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-row gap-8">
+            <PillOne type="guide" label="Read the guide" path="/" />
+            <PillOne type="clubs" label="Info for clubs" path="/" />
+          </div>
+          <div class="flex flex-row row gap-8">
+            <PillOne type="submit" label="Submit your design" path="/" />
+          </div>
+        </div>
+        <img src={sticker_arrow_cluster.src} />
+      </div>
+    </main>
   </body>
 </html>
