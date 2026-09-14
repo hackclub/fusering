@@ -3,37 +3,64 @@ import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="bg-card-beige text-text-black font-jakarta-sans">
-		<main class="min-h-screen flex flex-col items-center justify-center gap-6 p-8">
-			<h1 class="font-baloo-2 text-4xl font-bold text-fusering-orange">Fusering</h1>
-			<p class="font-jakarta-sans text-text-black">
-				Astro + Tailwind CSS + daisyUI, configured with the Fusering fonts and colour palette.
-			</p>
-			<div class="flex flex-wrap items-center justify-center gap-3">
-				<button class="btn text-white" style="background-color: var(--color-fusering-orange); border-color: var(--color-fusering-orange);">Primary action</button>
-				<button class="btn" style="background-color: var(--color-fusering-pink); border-color: var(--color-fusering-pink);">Secondary</button>
-				<button class="btn" style="background-color: var(--color-fusering-blue); border-color: var(--color-fusering-blue);">Tertiary</button>
-			</div>
-			<div class="flex flex-wrap items-center justify-center gap-3 mt-4">
-				<span class="badge" style="background-color: var(--color-icon-orange);">icon orange</span>
-				<span class="badge" style="background-color: var(--color-icon-pink);">icon pink</span>
-				<span class="badge" style="background-color: var(--color-icon-blue);">icon blue</span>
-				<span class="badge" style="background-color: var(--color-icon-green);">icon green</span>
-			</div>
-			<div class="bg-white border-[3px] border-black/35 rounded-card shadow-card p-8 mt-4 max-w-md">
-				<h2 class="font-baloo-2 text-2xl font-bold">Sticker card</h2>
-				<p class="font-jakarta-sans mt-2">
-					border-[3px] border-black/35 rounded-card shadow-card
-				</p>
-			</div>
-		</main>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="bg-card-beige text-text-black font-jakarta-sans">
+    <main
+      class="min-h-screen flex flex-col items-center justify-center gap-6 p-8"
+    >
+      <h1 class="font-baloo-2 text-4xl font-bold text-fusering-orange">
+        Fusering
+      </h1>
+      <p class="font-jakarta-sans text-text-black">
+        Astro + Tailwind CSS + daisyUI, configured with the Fusering fonts and
+        colour palette.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <button
+          class="btn text-white"
+          style="background-color: var(--color-fusering-orange); border-color: var(--color-fusering-orange);"
+          >Primary action</button
+        >
+        <button
+          class="btn"
+          style="background-color: var(--color-fusering-pink); border-color: var(--color-fusering-pink);"
+          >Secondary</button
+        >
+        <button
+          class="btn"
+          style="background-color: var(--color-fusering-blue); border-color: var(--color-fusering-blue);"
+          >Tertiary</button
+        >
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-3 mt-4">
+        <span class="badge" style="background-color: var(--color-icon-orange);"
+          >icon orange</span
+        >
+        <span class="badge" style="background-color: var(--color-icon-pink);"
+          >icon pink</span
+        >
+        <span class="badge" style="background-color: var(--color-icon-blue);"
+          >icon blue</span
+        >
+        <span class="badge" style="background-color: var(--color-icon-green);"
+          >icon green</span
+        >
+      </div>
+      <div
+        class="bg-white border-[3px] border-black/35 rounded-card shadow-card p-8 mt-4 max-w-md"
+      >
+        <h2 class="font-baloo-2 text-2xl font-bold">Sticker card</h2>
+        <p class="font-jakarta-sans mt-2">
+          border-[3px] border-black/35 rounded-card shadow-card
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
