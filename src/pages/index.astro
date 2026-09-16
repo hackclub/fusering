@@ -3,11 +3,25 @@ import "../styles/global.css";
 
 // Components
 import PillOne from "../components/pill_one.astro";
+import Card from "../components/card.astro";
 
 // Images
 import hero_banner from "../assets/hero_banner.png";
 import logo from "../assets/logo.png";
 import sticker_arrow_cluster from "../assets/sticker_arrow_cluster.png";
+
+import step1_icon from "../assets/step1_icon.png";
+import step2_icon from "../assets/step2_icon.png";
+import step3_icon from "../assets/step3_icon.png";
+
+import step1_image from "../assets/step1_image.png";
+import step2_image from "../assets/step2_image.png";
+import step3_image from "../assets/step3_image.png";
+
+import info_icon from "../assets/info_icon.png";
+
+import video_arrow from "../assets/video_arrow.png";
+import video_placeholder from "../assets/video_placeholder.png";
 ---
 
 <html lang="en">
@@ -20,31 +34,125 @@ import sticker_arrow_cluster from "../assets/sticker_arrow_cluster.png";
     <title>Astro</title>
   </head>
   <body class="bg-card-beige text-text-black font-jakarta-sans">
-    <!-- Hero banner -->
-    <div class="h-fit bg-blue relative">
-      <img src={hero_banner.src} class="top-0 left-0 w-full h-auto relative" />
-      <div class="absolute z-10 inset-0 top-0 right-0 flex items-center m-16">
-        <img src={logo.src} class="" />
-      </div>
-    </div>
-
     <!--Main -->
-    <main
-      class="min-h-screen flex flex-col gap-6 p-16 font-baloo-2 font-bold text-5xl"
-    >
-      <h1>Design a keyring, we'll ship it to you with stickers!</h1>
-      <div class="flex flex-row justify-between h-fit items-center">
-        <div class="flex flex-col gap-8">
-          <div class="flex flex-row gap-8">
-            <PillOne type="guide" label="Read the guide" path="/" />
-            <PillOne type="clubs" label="Info for clubs" path="/" />
-          </div>
-          <div class="flex flex-row row gap-8">
-            <PillOne type="submit" label="Submit your design" path="/" />
+    <main class="flex flex-col gap-6">
+      <!-- Section 1: hero -->
+      <section class="min-h-236.75 flex flex-col">
+        <!-- Hero banner -->
+        <div class="h-fit bg-blue relative">
+          <img
+            src={hero_banner.src}
+            class="top-0 left-0 w-full h-auto relative"
+          />
+          <div
+            class="absolute z-10 inset-0 top-0 right-0 flex items-center m-16"
+          >
+            <img src={logo.src} class="" />
           </div>
         </div>
-        <img src={sticker_arrow_cluster.src} />
-      </div>
+
+        <div
+          class="flex flex-col gap-6 p-16 font-baloo-2 font-bold text-5xl grow"
+        >
+          <h1>Design a keyring, we'll ship it to you with stickers!</h1>
+          <div class="flex flex-row justify-between items-center grow">
+            <div class="flex flex-col gap-8">
+              <div class="flex flex-row gap-8">
+                <PillOne type="guide" label="Read the guide" path="/" />
+                <PillOne type="clubs" label="Info for clubs" path="/" />
+              </div>
+              <div class="flex flex-row row gap-8">
+                <PillOne type="submit" label="Submit your design" path="/" />
+              </div>
+            </div>
+            <img src={sticker_arrow_cluster.src} />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: steps -->
+      <section class="min-h-236.75 flex flex-col gap-8 p-16 justify-center">
+        <div class="flex flex-row gap-8 p-16 justify-center">
+          <!-- step 1 -->
+          <div class="flex flex-row items-start gap-8">
+            <img src={step1_icon.src} />
+            <div class="flex flex-col gap-8 w-lg">
+              <div class="flex flex-col gap-2">
+                <h2 class="text-4xl font-baloo-2 font-bold">
+                  Prep your artwork.
+                </h2>
+                <p
+                  class="text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
+                >
+                  Time to get creative! Create a unique design for the front of
+                  your keyring, and turn it into a vector image.
+                </p>
+              </div>
+
+              <img src={step1_image.src} />
+            </div>
+          </div>
+
+          <!-- step 2 -->
+          <div class="flex flex-row items-start gap-8">
+            <img src={step2_icon.src} />
+            <div class="flex flex-col gap-8 w-lg">
+              <div class="flex flex-col gap-2">
+                <h2 class="text-4xl font-baloo-2 font-bold">
+                  Make your keyring
+                </h2>
+                <p
+                  class="text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
+                >
+                  Use the power of onshape, a popular CAD tool, to turn your
+                  artwork into a real, 3D printable part.
+                </p>
+              </div>
+
+              <img src={step2_image.src} />
+            </div>
+          </div>
+
+          <!-- step 3 -->
+          <div class="flex flex-row items-start gap-8">
+            <img src={step3_icon.src} />
+            <div class="flex flex-col gap-8 w-lg">
+              <div class="flex flex-col gap-2">
+                <h2 class="text-4xl font-baloo-2 font-bold">Show us!</h2>
+                <p
+                  class="text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
+                >
+                  Upload to printables.com and share your design with us! We'll
+                  print off your design and throw in a carabiner and exclusive
+                  stickers!
+                </p>
+              </div>
+
+              <img src={step3_image.src} />
+            </div>
+          </div>
+        </div>
+        <!--Unsure where to start -->
+        <div class="flex flex-row items-start gap-32 justify-center">
+          <Card>
+            <div class="flex flex-col gap-8 w-lg">
+              <div class="flex flex-row items-center gap-4">
+                <img src={info_icon.src} />
+                <h2 class="text-4xl font-baloo-2 font-bold">
+                  Unsure where to start?
+                </h2>
+              </div>
+              <p>
+                We have a variety of resources to help you learn Figma and
+                onshape, including written step-by-step tutorials,
+                presentations, and videos
+              </p>
+            </div>
+          </Card>
+          <img src={video_arrow.src} />
+          <img src={video_placeholder.src} />
+        </div>
+      </section>
     </main>
   </body>
 </html>

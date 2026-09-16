@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Card from "../components/card.astro";
 ---
 
 <html lang="en">
@@ -53,14 +54,14 @@ import "../styles/global.css";
           >icon green</span
         >
       </div>
-      <div
-        class="bg-white border-[3px] border-black/35 rounded-card shadow-card p-8 mt-4 max-w-md"
-      >
+      <Card class="mt-4 max-w-md">
         <h2 class="font-baloo-2 text-2xl font-bold">Sticker card</h2>
-        <p class="font-jakarta-sans mt-2">
-          border-[3px] border-black/35 rounded-card shadow-card
-        </p>
-      </div>
+        <p class="font-jakarta-sans mt-2">&lt;Card&gt; component</p>
+      </Card>
+      <Card bg="card-beige" class="mt-4 max-w-md">
+        <h2 class="font-baloo-2 text-2xl font-bold">Beige variant</h2>
+        <p class="font-jakarta-sans mt-2">&lt;Card bg="card-beige"&gt;</p>
+      </Card>
     </main>
   </body>
 </html>
