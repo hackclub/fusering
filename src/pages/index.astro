@@ -22,6 +22,13 @@ import info_icon from "../assets/info_icon.png";
 
 import video_arrow from "../assets/video_arrow.png";
 import video_placeholder from "../assets/video_placeholder.png";
+
+import fusering_cad_model from "../assets/fusering_cad_model.png";
+import project_image_1 from "../assets/project_image_1.png";
+import project_image_2 from "../assets/project_image_2.png";
+import project_image_3 from "../assets/project_image_3.png";
+import project_image_4 from "../assets/project_image_4.png";
+import project_image_5 from "../assets/project_image_5.png";
 ---
 
 <html lang="en">
@@ -71,7 +78,9 @@ import video_placeholder from "../assets/video_placeholder.png";
       </section>
 
       <!-- Section 2: steps -->
-      <section class="min-h-236.75 flex flex-col gap-8 p-16 justify-center">
+      <section
+        class="min-h-236.75 flex flex-col gap-8 p-16 justify-center items-center"
+      >
         <div class="flex flex-row gap-8 p-16 justify-center">
           <!-- step 1 -->
           <div class="flex flex-row items-start gap-8">
@@ -151,6 +160,41 @@ import video_placeholder from "../assets/video_placeholder.png";
           </Card>
           <img src={video_arrow.src} />
           <img src={video_placeholder.src} />
+        </div>
+      </section>
+
+      <!--Designs made by fellow Hack Clubbers -->
+      <section
+        class="min-h-236.75 flex flex-col gap-32 p-16 justify-center items-center"
+      >
+        <div class="flex flex-row justify-center items-center gap-64">
+          <Card>
+            <div class="flex flex-col w-3xl gap-8">
+              <h2 class="text-4xl font-baloo-2 font-bold">
+                See 150+ designs made by fellow Hack Clubbers
+              </h2>
+              <p>
+                Every design started the same way - an idea, plus the tools and
+                support to bring it to life. Learn the basics of CAD by getting
+                hands-on. Unsure what to make? Browse designs by the community
+                for some inspiration.
+              </p>
+              <PillOne
+                type="arrow"
+                label="Browse the gallery"
+                path="/"
+                fill="yes"
+              />
+            </div>
+          </Card>
+          <img src={fusering_cad_model.src} />
+        </div>
+        <div class="flex flex-row justify-center gap-16">
+          <img src={project_image_1.src} />
+          <img src={project_image_2.src} />
+          <img src={project_image_3.src} />
+          <img src={project_image_4.src} />
+          <img src={project_image_5.src} />
         </div>
       </section>
     </main>

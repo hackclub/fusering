@@ -2,13 +2,15 @@
 import guideIcon from "../assets/guide_icon.png";
 import clubsIcon from "../assets/clubs_icon.png";
 import submitIcon from "../assets/submit_icon.png";
+import arrowIcon from "../assets/arrow_icon.png";
 
-const { type, label, path } = Astro.props;
+const { type, label, path, fill } = Astro.props;
 
 const icons = {
   guide: guideIcon,
   clubs: clubsIcon,
   submit: submitIcon,
+  arrow: arrowIcon,
 };
 
 const icon = icons[type as keyof typeof icons];
@@ -18,7 +20,10 @@ const icon = icons[type as keyof typeof icons];
 
 <a
   href={path}
-  class="flex flex-row p-4 rounded-full border-4 border-text-black items-center gap-8 hover:bg-fusering-blue hover:shadow-card"
+  class:list={[
+    "flex flex-row font-baloo-2 p-4 rounded-full border-4  border-text-black items-center gap-8 w-fit hover:bg-fusering-blue hover:shadow-card",
+    { "bg-fusering-blue": fill === "yes" },
+  ]}
 >
   <p class="text-3xl font-semibold">{label}</p>
   {icon && <img src={icon.src} />}
