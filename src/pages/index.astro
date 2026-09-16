@@ -60,12 +60,13 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
         <div class="h-fit bg-blue relative">
           <img
             src={hero_banner.src}
+            alt=""
             class="top-0 left-0 w-full h-auto relative"
           />
           <div
             class="absolute z-10 inset-0 top-0 right-0 flex items-center m-16"
           >
-            <img src={logo.src} class="" />
+            <img src={logo.src} alt="Fusering logo" />
           </div>
         </div>
 
@@ -83,7 +84,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
                 <PillOne type="submit" label="Submit your design" path="/" />
               </div>
             </div>
-            <img src={sticker_arrow_cluster.src} />
+            <img src={sticker_arrow_cluster.src} alt="" />
           </div>
         </div>
       </section>
@@ -95,7 +96,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
         <div class="flex flex-row gap-8 p-16 justify-center">
           <!-- step 1 -->
           <div class="flex flex-row items-start gap-8">
-            <img src={step1_icon.src} />
+            <img src={step1_icon.src} alt="" />
             <div class="flex flex-col gap-8 w-lg">
               <div class="flex flex-col gap-2">
                 <h2 class="text-4xl font-baloo-2 font-bold">
@@ -109,13 +110,17 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
                 </p>
               </div>
 
-              <img src={step1_image.src} />
+              <img
+                src={step1_image.src}
+                alt="Example keyring artwork vector design"
+                class="self-center"
+              />
             </div>
           </div>
 
           <!-- step 2 -->
           <div class="flex flex-row items-start gap-8">
-            <img src={step2_icon.src} />
+            <img src={step2_icon.src} alt="" />
             <div class="flex flex-col gap-8 w-lg">
               <div class="flex flex-col gap-2">
                 <h2 class="text-4xl font-baloo-2 font-bold">
@@ -129,13 +134,17 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
                 </p>
               </div>
 
-              <img src={step2_image.src} />
+              <img
+                src={step2_image.src}
+                alt="Example keyring CAD model in Onshape"
+                class="self-center"
+              />
             </div>
           </div>
 
           <!-- step 3 -->
           <div class="flex flex-row items-start gap-8">
-            <img src={step3_icon.src} />
+            <img src={step3_icon.src} alt="" />
             <div class="flex flex-col gap-8 w-lg">
               <div class="flex flex-col gap-2">
                 <h2 class="text-4xl font-baloo-2 font-bold">Show us!</h2>
@@ -148,7 +157,11 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
                 </p>
               </div>
 
-              <img src={step3_image.src} />
+              <img
+                src={step3_image.src}
+                alt="Finished printed keyring with carabiner and stickers"
+                class="self-center"
+              />
             </div>
           </div>
         </div>
@@ -157,20 +170,23 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
           <Card>
             <div class="flex flex-col gap-8 w-lg">
               <div class="flex flex-row items-center gap-4">
-                <img src={info_icon.src} />
+                <img src={info_icon.src} alt="" />
                 <h2 class="text-4xl font-baloo-2 font-bold">
                   Unsure where to start?
                 </h2>
               </div>
-              <p>
+              <p class="text-xl font-jakarta-sans leading-relaxed">
                 We have a variety of resources to help you learn Figma and
                 onshape, including written step-by-step tutorials,
                 presentations, and videos
               </p>
             </div>
           </Card>
-          <img src={video_arrow.src} />
-          <img src={video_placeholder.src} />
+          <img src={video_arrow.src} alt="" />
+          <img
+            src={video_placeholder.src}
+            alt="Video placeholder for step-by-step tutorial"
+          />
         </div>
       </section>
 
@@ -184,7 +200,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               <h2 class="text-4xl font-baloo-2 font-bold">
                 See 150+ designs made by fellow Hack Clubbers
               </h2>
-              <p>
+              <p class="text-xl font-jakarta-sans leading-relaxed">
                 Every design started the same way - an idea, plus the tools and
                 support to bring it to life. Learn the basics of CAD by getting
                 hands-on. Unsure what to make? Browse designs by the community
@@ -198,14 +214,34 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               />
             </div>
           </Card>
-          <img src={fusering_cad_model.src} />
+          <img src={fusering_cad_model.src} alt="Fusering keyring CAD model" />
         </div>
         <div class="flex flex-row justify-center gap-16">
-          <img src={project_image_1.src} />
-          <img src={project_image_2.src} />
-          <img src={project_image_3.src} />
-          <img src={project_image_4.src} />
-          <img src={project_image_5.src} />
+          <img
+            src={project_image_1.src}
+            alt="Community keyring design example"
+            class="self-start"
+          />
+          <img
+            src={project_image_2.src}
+            alt="Community keyring design example"
+            class="self-start"
+          />
+          <img
+            src={project_image_3.src}
+            alt="Community keyring design example"
+            class="self-start"
+          />
+          <img
+            src={project_image_4.src}
+            alt="Community keyring design example"
+            class="self-start"
+          />
+          <img
+            src={project_image_5.src}
+            alt="Community keyring design example"
+            class="self-start"
+          />
         </div>
       </section>
       <section
@@ -214,7 +250,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
         <div class="flex flex-row gap-64">
           <div class="flex flex-col gap-8 w-3xl">
             <div class="flex flex-row gap-4 items-center">
-              <img src={fusering_logo_colour_small.src} />
+              <img src={fusering_logo_colour_small.src} alt="Fusering logo" />
               <h2 class="text-4xl font-baloo-2 font-bold">Submission rules</h2>
             </div>
             <p class="text-xl font-jakarta-sans">
@@ -226,7 +262,11 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               >
             </p>
           </div>
-          <img src={fusering_projects_cluster.src} />
+          <img
+            src={fusering_projects_cluster.src}
+            alt="Cluster of community keyring projects"
+            class="self-start"
+          />
         </div>
         <div class="flex flex-row gap-8">
           <CardTwo
@@ -256,7 +296,11 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
         class="min-h-236.75 flex flex-col gap-32 p-16 justify-center items-center"
       >
         <div class="flex flex-row gap-32">
-          <img src={fusering_sample_cluster.src} class="self-start" />
+          <img
+            src={fusering_sample_cluster.src}
+            alt="Sample keyrings in six filament colours"
+            class="self-start"
+          />
           <div class="flex flex-col gap-16">
             <Card>
               <h2 class="text-4xl font-baloo-2 font-bold">
@@ -270,7 +314,11 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
                 send them with extra stickers for your members to enjoy!
               </p>
             </Card>
-            <img src={print_farm_image_cluster.src} class="self-start" />
+            <img
+              src={print_farm_image_cluster.src}
+              alt="Hack Club HQ print farm producing keyrings"
+              class="self-start"
+            />
           </div>
         </div>
       </section>
@@ -281,11 +329,11 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
           <div class="grid grid-cols-3 grid-rows-2 w-7xl gap-y-8 gap-x-16">
             <!--top row -->
             <div class="flex flex-col items-start justify-end">
-              <img src={fusering_logo_footer.src} />
+              <img src={fusering_logo_footer.src} alt="Fusering logo" />
             </div>
             <div class="flex flex-col items-start justify-end">
               <h2 class="text-4xl font-baloo-2 font-bold flex flex-row gap-4">
-                A <img src={hc_logo_footer.src} /> YSWS
+                A <img src={hc_logo_footer.src} alt="Hack Club logo" /> YSWS
               </h2>
             </div>
             <div class="flex flex-col items-start justify-end">
@@ -312,7 +360,11 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               <a href="" class="hover:underline">Hack Club</a>
             </div>
           </div>
-          <img src={cube_cluster_footer.src} />
+          <img
+            src={cube_cluster_footer.src}
+            alt=""
+            class="self-start"
+          />
         </div>
       </footer>
     </main>

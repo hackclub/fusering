@@ -21,8 +21,10 @@ const icon = icons[type as keyof typeof icons];
 <a
   href={path}
   class:list={[
-    "flex flex-row font-baloo-2 p-4 rounded-full border-4  border-text-black items-center gap-8 w-fit hover:bg-fusering-blue hover:shadow-card",
-    { "bg-fusering-blue": fill === "yes" },
+    "flex flex-row font-baloo-2 p-4 rounded-full items-center gap-8 w-fit",
+    fill === "yes"
+      ? "bg-fusering-blue border-4 border-black/35 hover:shadow-card"
+      : "border-4 border-text-black hover:bg-fusering-blue hover:shadow-card",
   ]}
 >
   <p class="text-3xl font-semibold">{label}</p>
