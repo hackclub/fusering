@@ -33,6 +33,13 @@ import project_image_5 from "../assets/project_image_5.png";
 
 import fusering_logo_colour_small from "../assets/fusering_logo_colour_small.png";
 import fusering_projects_cluster from "../assets/fusering_projects_cluster.png";
+
+import fusering_sample_cluster from "../assets/fusering_sample_cluster.png";
+import print_farm_image_cluster from "../assets/print_farm_image_cluster.png";
+
+import fusering_logo_footer from "../assets/fusering_logo_footer.png";
+import hc_logo_footer from "../assets/hc_logo_footer.png";
+import cube_cluster_footer from "../assets/cube_cluster_footer.png";
 ---
 
 <html lang="en">
@@ -225,7 +232,7 @@ import fusering_projects_cluster from "../assets/fusering_projects_cluster.png";
           <CardTwo
             icon="eligible"
             title="Eligibility"
-            text="You must be <b>aged 13&ndash;18, and</b> verified via Hack Club Auth <b>or</b> be taking part in a workshop."
+            text="You must be <b>aged 13–18, and</b> verified via Hack Club Auth <b>or</b> be taking part in a workshop."
           />
           <CardTwo
             icon="original"
@@ -245,6 +252,69 @@ import fusering_projects_cluster from "../assets/fusering_projects_cluster.png";
           />
         </div>
       </section>
+      <section
+        class="min-h-236.75 flex flex-col gap-32 p-16 justify-center items-center"
+      >
+        <div class="flex flex-row gap-32">
+          <img src={fusering_sample_cluster.src} class="self-start" />
+          <div class="flex flex-col gap-16">
+            <Card>
+              <h2 class="text-4xl font-baloo-2 font-bold">
+                Six awesome colour to choose from!
+              </h2>
+              <p class="text-xl font-jakarta-sans leading-relaxed max-w-3xl">
+                Choose from six different filament options, or mix and match
+                with multi-colour printing! Most designs are printed in house
+                and shipped from Hack Club HQ! Are you a club leader running a
+                workshop? We'll bundle all your designs into one package, and
+                send them with extra stickers for your members to enjoy!
+              </p>
+            </Card>
+            <img src={print_farm_image_cluster.src} class="self-start" />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div
+          class="flex flex-row w-screen justify-between h-82.5 bg-text-black text-fusering-beige p-16"
+        >
+          <div class="grid grid-cols-3 grid-rows-2 w-7xl gap-y-8 gap-x-16">
+            <!--top row -->
+            <div class="flex flex-col items-start justify-end">
+              <img src={fusering_logo_footer.src} />
+            </div>
+            <div class="flex flex-col items-start justify-end">
+              <h2 class="text-4xl font-baloo-2 font-bold flex flex-row gap-4">
+                A <img src={hc_logo_footer.src} /> YSWS
+              </h2>
+            </div>
+            <div class="flex flex-col items-start justify-end">
+              <h2 class="text-4xl font-baloo-2 font-bold">Resources</h2>
+            </div>
+            <!-- bottom row -->
+            <div>
+              <p class="font-jakarta-sans text-xl">
+                Fusering V2 is sponsored by David on the YSWS team. Fusering is
+                clubs friendly! To apply to run a workshop, please check out the
+                clubs portal.
+              </p>
+            </div>
+            <div>
+              <p class="font-jakarta-sans text-xl">
+                Built for teens, by teens. A 501(C)(3) non profit, EIN:
+                81-2908499. Check out our GitHub, Slack, and HCB.
+              </p>
+            </div>
+            <div class="flex flex-col font-jakarta-sans text-xl">
+              <a href="" class="hover:underline">Fulfilment bounty</a>
+              <a href="" class="hover:underline">Privacy and terms</a>
+              <a href="" class="hover:underline">Fusering guide</a>
+              <a href="" class="hover:underline">Hack Club</a>
+            </div>
+          </div>
+          <img src={cube_cluster_footer.src} />
+        </div>
+      </footer>
     </main>
   </body>
 </html>
