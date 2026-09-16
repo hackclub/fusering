@@ -4,6 +4,7 @@ import "../styles/global.css";
 // Components
 import PillOne from "../components/pill_one.astro";
 import Card from "../components/card.astro";
+import CardTwo from "../components/card_two.astro";
 
 // Images
 import hero_banner from "../assets/hero_banner.png";
@@ -29,6 +30,9 @@ import project_image_2 from "../assets/project_image_2.png";
 import project_image_3 from "../assets/project_image_3.png";
 import project_image_4 from "../assets/project_image_4.png";
 import project_image_5 from "../assets/project_image_5.png";
+
+import fusering_logo_colour_small from "../assets/fusering_logo_colour_small.png";
+import fusering_projects_cluster from "../assets/fusering_projects_cluster.png";
 ---
 
 <html lang="en">
@@ -195,6 +199,50 @@ import project_image_5 from "../assets/project_image_5.png";
           <img src={project_image_3.src} />
           <img src={project_image_4.src} />
           <img src={project_image_5.src} />
+        </div>
+      </section>
+      <section
+        class="min-h-236.75 flex flex-col gap-32 p-16 justify-center items-center"
+      >
+        <div class="flex flex-row gap-64">
+          <div class="flex flex-col gap-8 w-3xl">
+            <div class="flex flex-row gap-4 items-center">
+              <img src={fusering_logo_colour_small.src} />
+              <h2 class="text-4xl font-baloo-2 font-bold">Submission rules</h2>
+            </div>
+            <p class="text-xl font-jakarta-sans">
+              Before you jump straight into designing, let's go over the rules.
+              Please make sure that your submission meets all four requirements
+              before you get started! <b
+                >You'll also need to upload your design to printables.com to
+                submit!</b
+              >
+            </p>
+          </div>
+          <img src={fusering_projects_cluster.src} />
+        </div>
+        <div class="flex flex-row gap-8">
+          <CardTwo
+            icon="eligible"
+            title="Eligibility"
+            text="You must be <b>aged 13&ndash;18, and</b> verified via Hack Club Auth <b>or</b> be taking part in a workshop."
+          />
+          <CardTwo
+            icon="original"
+            title="Original work"
+            text="No copied artwork or logos, regardless of if they are from a big brand, or not. This means no using AI too."
+          />
+          <CardTwo
+            icon="printable"
+            title="Printable size"
+            text="Your design must have a flat bottom and fit the max dimensions:"
+            dimensions={{ l: "80mm", w: "80mm", d: "6mm" }}
+          />
+          <CardTwo
+            icon="effort"
+            title="High effort"
+            text="Get creative! A plain rectangle with generic text is likely to be rejected."
+          />
         </div>
       </section>
     </main>
