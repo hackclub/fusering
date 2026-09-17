@@ -40,6 +40,8 @@ import print_farm_image_cluster from "../assets/print_farm_image_cluster.png";
 import fusering_logo_footer from "../assets/fusering_logo_footer.png";
 import hc_logo_footer from "../assets/hc_logo_footer.png";
 import cube_cluster_footer from "../assets/cube_cluster_footer.png";
+
+import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
 ---
 
 <html lang="en">
@@ -85,8 +87,16 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
           >
             <div class="flex flex-col gap-8">
               <div class="flex flex-row flex-wrap gap-8">
-                <PillOne type="guide" label="Read the guide" path="/" />
-                <PillOne type="clubs" label="Info for clubs" path="/" />
+                <PillOne
+                  type="guide"
+                  label="Read the guide"
+                  modalId="guide_info_modal"
+                />
+                <PillOne
+                  type="clubs"
+                  label="Info for clubs"
+                  modalId="clubs_info_modal"
+                />
               </div>
               <div class="flex flex-row flex-wrap gap-8">
                 <PillOne
@@ -99,7 +109,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
             <img
               src={sticker_arrow_cluster.src}
               alt=""
-              class="max-w-full h-auto"
+              class="max-w-full h-auto ml-auto"
             />
           </div>
         </div>
@@ -221,11 +231,17 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
             </div>
           </Card>
           <img src={video_arrow.src} alt="" class="hidden lg:block" />
-          <img
-            src={video_placeholder.src}
-            alt="Video placeholder for step-by-step tutorial"
-            class="max-w-full h-auto"
-          />
+          <button
+            type="button"
+            onclick="video_coming_soon_modal.showModal()"
+            class="cursor-pointer"
+          >
+            <img
+              src={video_placeholder.src}
+              alt="Video placeholder for step-by-step tutorial"
+              class="max-w-full h-auto"
+            />
+          </button>
         </div>
       </section>
 
@@ -250,7 +266,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               <PillOne
                 type="arrow"
                 label="Browse the gallery"
-                path="/"
+                modalId="gallery_coming_soon_modal"
                 fill="yes"
               />
             </div>
@@ -262,32 +278,32 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
           />
         </div>
         <div
-          class="flex flex-row flex-wrap justify-center gap-[clamp(1.5rem,3vw,2.5rem)]"
+          class="grid grid-cols-6 min-[1740px]:grid-cols-5 justify-items-center gap-[clamp(1.5rem,3vw,2.5rem)]"
         >
           <img
             src={project_image_1.src}
             alt="Community keyring design example"
-            class="self-start max-w-full h-auto"
+            class="col-span-2 min-[1740px]:col-span-1 max-w-full h-auto"
           />
           <img
             src={project_image_2.src}
             alt="Community keyring design example"
-            class="self-start max-w-full h-auto"
+            class="col-span-2 min-[1740px]:col-span-1 max-w-full h-auto"
           />
           <img
             src={project_image_3.src}
             alt="Community keyring design example"
-            class="self-start max-w-full h-auto"
+            class="col-span-2 min-[1740px]:col-span-1 max-w-full h-auto"
           />
           <img
             src={project_image_4.src}
             alt="Community keyring design example"
-            class="self-start max-w-full h-auto"
+            class="col-span-2 col-start-2 min-[1740px]:col-span-1 min-[1740px]:col-start-auto max-w-full h-auto"
           />
           <img
             src={project_image_5.src}
             alt="Community keyring design example"
-            class="self-start max-w-full h-auto"
+            class="col-span-2 col-start-4 min-[1740px]:col-span-1 min-[1740px]:col-start-auto max-w-full h-auto"
           />
         </div>
       </section>
@@ -320,7 +336,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
           />
         </div>
         <div
-          class="flex flex-row flex-wrap justify-center gap-[clamp(1rem,2vw,2rem)]"
+          class="grid grid-cols-1 min-[640px]:grid-cols-2 min-[1780px]:grid-cols-4 justify-items-center gap-[clamp(1rem,2vw,2rem)]"
         >
           <CardTwo
             icon="eligible"
@@ -341,7 +357,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
           <CardTwo
             icon="effort"
             title="High effort"
-            text="Get creative! A plain rectangle with generic text is likely to be rejected."
+            text="Get creative! A plain rectangle with generic text is likely to be rejected. Projects made in Tinkercad and similar drag and drop CAD tools will be rejected too."
           />
         </div>
       </section>
@@ -415,10 +431,21 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               </p>
             </div>
             <div class="flex flex-col font-jakarta-sans text-xl">
-              <a href="" class="hover:underline">Fulfilment bounty</a>
-              <a href="" class="hover:underline">Privacy and terms</a>
-              <a href="" class="hover:underline">Fusering guide</a>
-              <a href="" class="hover:underline">Hack Club</a>
+              <a
+                href="https://forms.hackclub.com/bounty"
+                class="hover:underline">Fulfilment bounty</a
+              >
+              <a
+                href="https://hackclub.com/privacy-and-terms"
+                class="hover:underline">Privacy and terms</a
+              >
+              <a
+                href="https://www.figma.com/deck/gX6MAxP5ipzvqXmF9K3tIt/Fusering-Workshop---Onshape-Edition?node-id=1-82&viewport=-132%2C-167%2C0.76&t=CjsVnPT4UcSW3QjO-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+                class="hover:underline">Fusering guide</a
+              >
+              <a href="https://hackclub.com/" class="hover:underline"
+                >Hack Club</a
+              >
             </div>
           </div>
           <img
@@ -429,5 +456,141 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
         </div>
       </footer>
     </main>
+
+    <dialog id="clubs_info_modal" class="modal">
+      <div
+        class="modal-box bg-card-beige border-4 border-black/35 rounded-3xl shadow-card"
+      >
+        <form method="dialog">
+          <button
+            class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-text-black"
+          >
+            ✕
+          </button>
+        </form>
+        <h3 class="text-4xl font-baloo-2 font-bold">Info for clubs</h3>
+        <p class="text-xl font-jakarta-sans leading-relaxed py-4">
+          Fusering workshops now have a new home in the clubs portal! To run a
+          workshop, ship a project to Fusering, then apply to run a workshop
+          through the clubs portal!
+        </p>
+        <p class="text-xl font-jakarta-sans leading-relaxed py-4">
+          We'll 3D print all the designs made by your club members, bundle them
+          with carabiners and exclusive Orpheus stickers, and ship them straight
+          to your club!
+        </p>
+        <img
+          src={clubs_portal_screenshot.src}
+          alt="Hack Club clubs portal workshop application page"
+          class="w-full max-w-sm h-auto rounded-xl border-4 border-black/35 my-4 mx-auto"
+        />
+        <div class="modal-action">
+          <PillOne
+            type="arrow"
+            label="Apply on Clubs Portal"
+            path="https://clubs.hackclub.com/workshops"
+            fill="yes"
+            size="sm"
+          />
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+    <dialog id="guide_info_modal" class="modal">
+      <div
+        class="modal-box bg-card-beige border-4 border-black/35 rounded-3xl shadow-card"
+      >
+        <form method="dialog">
+          <button
+            class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-text-black"
+          >
+            ✕
+          </button>
+        </form>
+        <h3 class="text-4xl font-baloo-2 font-bold">Fusering Guide</h3>
+        <p class="text-xl font-jakarta-sans leading-relaxed py-4">
+          The new Fusering guide is still under construction and not quite ready
+          to be shared yet. In the meantime, here's the old workshop to get you
+          started!
+        </p>
+        <div class="modal-action">
+          <PillOne
+            type="arrow"
+            label="View on Figma Slides"
+            path="https://www.figma.com/deck/gX6MAxP5ipzvqXmF9K3tIt/Fusering-Workshop---Onshape-Edition?node-id=1-82&viewport=-132%2C-167%2C0.76&t=CjsVnPT4UcSW3QjO-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+            fill="yes"
+            size="sm"
+          />
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+    <dialog id="gallery_coming_soon_modal" class="modal">
+      <div
+        class="modal-box bg-card-beige border-4 border-black/35 rounded-3xl shadow-card"
+      >
+        <form method="dialog">
+          <button
+            class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-text-black"
+          >
+            ✕
+          </button>
+        </form>
+        <h3 class="text-4xl font-baloo-2 font-bold">Coming soon!</h3>
+        <p class="text-xl font-jakarta-sans leading-relaxed py-4">
+          The gallery is still under construction. Check back later to see all
+          the designs made by fellow Hack Clubbers!
+        </p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button
+              class="flex flex-row font-baloo-2 rounded-full items-center w-fit shrink-0 p-3 gap-4 bg-fusering-blue border-4 border-black/35 hover:shadow-card"
+            >
+              <p class="text-xl font-semibold whitespace-nowrap">Got it!</p>
+            </button>
+          </form>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
+    <dialog id="video_coming_soon_modal" class="modal">
+      <div
+        class="modal-box bg-card-beige border-4 border-black/35 rounded-3xl shadow-card"
+      >
+        <form method="dialog">
+          <button
+            class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-text-black"
+          >
+            ✕
+          </button>
+        </form>
+        <h3 class="text-4xl font-baloo-2 font-bold">Coming soon!</h3>
+        <p class="text-xl font-jakarta-sans leading-relaxed py-4">
+          The fusering tutorial video isn't quite ready yet, we expect to have
+          it ready to go by the end of October!
+        </p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button
+              class="flex flex-row font-baloo-2 rounded-full items-center w-fit shrink-0 p-3 gap-4 bg-fusering-blue border-4 border-black/35 hover:shadow-card"
+            >
+              <p class="text-xl font-semibold whitespace-nowrap">Got it!</p>
+            </button>
+          </form>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
   </body>
 </html>

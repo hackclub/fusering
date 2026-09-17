@@ -4,7 +4,7 @@ import clubsIcon from "../assets/clubs_icon.png";
 import submitIcon from "../assets/submit_icon.png";
 import arrowIcon from "../assets/arrow_icon.png";
 
-const { type, label, path, fill } = Astro.props;
+const { type, label, path, fill, modalId, size } = Astro.props;
 
 const icons = {
   guide: guideIcon,
@@ -14,19 +14,32 @@ const icons = {
 };
 
 const icon = icons[type as keyof typeof icons];
+const isSmall = size === "sm";
 
-//text 3xl
+const pillClasses = [
+  "flex flex-row font-baloo-2 rounded-full items-center w-fit shrink-0",
+  isSmall ? "p-3 gap-4" : "p-4 gap-8",
+  fill === "yes"
+    ? "bg-fusering-blue border-4 border-black/35 hover:shadow-card"
+    : "border-4 border-text-black hover:bg-fusering-blue hover:shadow-card",
+];
+
+const labelClasses = isSmall
+  ? "text-xl font-semibold whitespace-nowrap"
+  : "text-3xl font-semibold whitespace-nowrap";
+const iconClasses = isSmall ? "w-6 h-auto" : "";
 ---
 
-<a
-  href={path}
-  class:list={[
-    "flex flex-row font-baloo-2 p-4 rounded-full items-center gap-8 w-fit",
-    fill === "yes"
-      ? "bg-fusering-blue border-4 border-black/35 hover:shadow-card"
-      : "border-4 border-text-black hover:bg-fusering-blue hover:shadow-card",
-  ]}
->
-  <p class="text-3xl font-semibold">{label}</p>
-  {icon && <img src={icon.src} />}
-</a>
+{
+  modalId ? (
+    <button type="button" onclick={`${modalId}.showModal()`} class:list={pillClasses}>
+      <p class:list={labelClasses}>{label}</p>
+      {icon && <img src={icon.src} class:list={iconClasses} />}
+    </button>
+  ) : (
+    <a href={path} class:list={pillClasses}>
+      <p class:list={labelClasses}>{label}</p>
+      {icon && <img src={icon.src} class:list={iconClasses} />}
+    </a>
+  )
+}
