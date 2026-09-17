@@ -49,13 +49,15 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>
+      Fusering - Design a keyring, we'll ship it to you with stickers!
+    </title>
   </head>
   <body class="bg-card-beige text-text-black font-jakarta-sans">
     <!--Main -->
-    <main class="flex flex-col gap-6">
+    <main class="flex flex-col gap-6 w-full max-w-[2100px] mx-auto">
       <!-- Section 1: hero -->
-      <section class="min-h-236.75 flex flex-col">
+      <section class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col">
         <!-- Hero banner -->
         <div class="h-fit bg-blue relative">
           <img
@@ -64,40 +66,62 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
             class="top-0 left-0 w-full h-auto relative"
           />
           <div
-            class="absolute z-10 inset-0 top-0 right-0 flex items-center m-16"
+            class="absolute z-10 inset-0 top-0 right-0 flex items-center m-[clamp(1rem,4vw,4rem)]"
           >
-            <img src={logo.src} alt="Fusering logo" />
+            <img
+              src={logo.src}
+              alt="Fusering logo"
+              class="max-w-[30%] h-auto"
+            />
           </div>
         </div>
 
         <div
-          class="flex flex-col gap-6 p-16 font-baloo-2 font-bold text-5xl grow"
+          class="flex flex-col gap-6 p-[clamp(1.5rem,4vw,4rem)] font-baloo-2 font-bold text-[clamp(1.75rem,3.5vw,3rem)] grow"
         >
           <h1>Design a keyring, we'll ship it to you with stickers!</h1>
-          <div class="flex flex-row justify-between items-center grow">
+          <div
+            class="flex flex-row flex-wrap justify-between items-center gap-8 grow"
+          >
             <div class="flex flex-col gap-8">
-              <div class="flex flex-row gap-8">
+              <div class="flex flex-row flex-wrap gap-8">
                 <PillOne type="guide" label="Read the guide" path="/" />
                 <PillOne type="clubs" label="Info for clubs" path="/" />
               </div>
-              <div class="flex flex-row row gap-8">
-                <PillOne type="submit" label="Submit your design" path="/" />
+              <div class="flex flex-row flex-wrap gap-8">
+                <PillOne
+                  type="submit"
+                  label="Submit your design"
+                  path="https://submit.hackclub.com/fusering-v2"
+                />
               </div>
             </div>
-            <img src={sticker_arrow_cluster.src} alt="" />
+            <img
+              src={sticker_arrow_cluster.src}
+              alt=""
+              class="max-w-full h-auto"
+            />
           </div>
         </div>
       </section>
 
       <!-- Section 2: steps -->
       <section
-        class="min-h-236.75 flex flex-col gap-8 p-16 justify-center items-center"
+        class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col gap-8 p-[clamp(1.5rem,4vw,4rem)] justify-center items-center"
       >
-        <div class="flex flex-row gap-8 p-16 justify-center">
+        <div
+          class="flex flex-row flex-wrap gap-8 p-[clamp(1rem,3vw,4rem)] justify-center"
+        >
           <!-- step 1 -->
           <div class="flex flex-row items-start gap-8">
-            <img src={step1_icon.src} alt="" />
-            <div class="flex flex-col gap-8 w-lg">
+            <img
+              src={step1_icon.src}
+              alt=""
+              class="shrink-0 max-w-full h-auto"
+            />
+            <div
+              class="flex flex-col gap-8 w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
+            >
               <div class="flex flex-col gap-2">
                 <h2 class="text-4xl font-baloo-2 font-bold">
                   Prep your artwork.
@@ -113,15 +137,21 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               <img
                 src={step1_image.src}
                 alt="Example keyring artwork vector design"
-                class="self-center"
+                class="self-center max-w-full h-auto"
               />
             </div>
           </div>
 
           <!-- step 2 -->
           <div class="flex flex-row items-start gap-8">
-            <img src={step2_icon.src} alt="" />
-            <div class="flex flex-col gap-8 w-lg">
+            <img
+              src={step2_icon.src}
+              alt=""
+              class="shrink-0 max-w-full h-auto"
+            />
+            <div
+              class="flex flex-col gap-8 w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
+            >
               <div class="flex flex-col gap-2">
                 <h2 class="text-4xl font-baloo-2 font-bold">
                   Make your keyring
@@ -137,15 +167,21 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               <img
                 src={step2_image.src}
                 alt="Example keyring CAD model in Onshape"
-                class="self-center"
+                class="self-center max-w-full h-auto"
               />
             </div>
           </div>
 
           <!-- step 3 -->
           <div class="flex flex-row items-start gap-8">
-            <img src={step3_icon.src} alt="" />
-            <div class="flex flex-col gap-8 w-lg">
+            <img
+              src={step3_icon.src}
+              alt=""
+              class="shrink-0 max-w-full h-auto"
+            />
+            <div
+              class="flex flex-col gap-8 w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
+            >
               <div class="flex flex-col gap-2">
                 <h2 class="text-4xl font-baloo-2 font-bold">Show us!</h2>
                 <p
@@ -160,17 +196,19 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               <img
                 src={step3_image.src}
                 alt="Finished printed keyring with carabiner and stickers"
-                class="self-center"
+                class="self-center max-w-full h-auto"
               />
             </div>
           </div>
         </div>
         <!--Unsure where to start -->
-        <div class="flex flex-row items-start gap-32 justify-center">
+        <div
+          class="flex flex-row flex-wrap items-center gap-[clamp(1.5rem,4vw,4rem)] justify-center"
+        >
           <Card>
-            <div class="flex flex-col gap-8 w-lg">
+            <div class="flex flex-col gap-8 w-[clamp(18rem,35vw-10rem,32rem)]">
               <div class="flex flex-row items-center gap-4">
-                <img src={info_icon.src} alt="" />
+                <img src={info_icon.src} alt="" class="max-w-full h-auto" />
                 <h2 class="text-4xl font-baloo-2 font-bold">
                   Unsure where to start?
                 </h2>
@@ -182,21 +220,24 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               </p>
             </div>
           </Card>
-          <img src={video_arrow.src} alt="" />
+          <img src={video_arrow.src} alt="" class="hidden lg:block" />
           <img
             src={video_placeholder.src}
             alt="Video placeholder for step-by-step tutorial"
+            class="max-w-full h-auto"
           />
         </div>
       </section>
 
       <!--Designs made by fellow Hack Clubbers -->
       <section
-        class="min-h-236.75 flex flex-col gap-32 p-16 justify-center items-center"
+        class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col gap-[clamp(1.5rem,4vw,4rem)] p-[clamp(1.5rem,4vw,4rem)] justify-center items-center"
       >
-        <div class="flex flex-row justify-center items-center gap-64">
+        <div
+          class="flex flex-row flex-wrap justify-center items-center gap-[clamp(2.5rem,6vw,5rem)]"
+        >
           <Card>
-            <div class="flex flex-col w-3xl gap-8">
+            <div class="flex flex-col w-[clamp(24rem,60vw-24rem,48rem)] gap-8">
               <h2 class="text-4xl font-baloo-2 font-bold">
                 See 150+ designs made by fellow Hack Clubbers
               </h2>
@@ -214,43 +255,53 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
               />
             </div>
           </Card>
-          <img src={fusering_cad_model.src} alt="Fusering keyring CAD model" />
+          <img
+            src={fusering_cad_model.src}
+            alt="Fusering keyring CAD model"
+            class="max-w-full h-auto"
+          />
         </div>
-        <div class="flex flex-row justify-center gap-16">
+        <div
+          class="flex flex-row flex-wrap justify-center gap-[clamp(1.5rem,3vw,2.5rem)]"
+        >
           <img
             src={project_image_1.src}
             alt="Community keyring design example"
-            class="self-start"
+            class="self-start max-w-full h-auto"
           />
           <img
             src={project_image_2.src}
             alt="Community keyring design example"
-            class="self-start"
+            class="self-start max-w-full h-auto"
           />
           <img
             src={project_image_3.src}
             alt="Community keyring design example"
-            class="self-start"
+            class="self-start max-w-full h-auto"
           />
           <img
             src={project_image_4.src}
             alt="Community keyring design example"
-            class="self-start"
+            class="self-start max-w-full h-auto"
           />
           <img
             src={project_image_5.src}
             alt="Community keyring design example"
-            class="self-start"
+            class="self-start max-w-full h-auto"
           />
         </div>
       </section>
       <section
-        class="min-h-236.75 flex flex-col gap-32 p-16 justify-center items-center"
+        class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col gap-[clamp(1.5rem,4vw,4rem)] p-[clamp(1.5rem,4vw,4rem)] justify-center items-center"
       >
-        <div class="flex flex-row gap-64">
-          <div class="flex flex-col gap-8 w-3xl">
+        <div class="flex flex-row flex-wrap gap-[clamp(2rem,6vw,4rem)]">
+          <div class="flex flex-col gap-8 w-[clamp(24rem,60vw-24rem,48rem)]">
             <div class="flex flex-row gap-4 items-center">
-              <img src={fusering_logo_colour_small.src} alt="Fusering logo" />
+              <img
+                src={fusering_logo_colour_small.src}
+                alt="Fusering logo"
+                class="max-w-full h-auto"
+              />
               <h2 class="text-4xl font-baloo-2 font-bold">Submission rules</h2>
             </div>
             <p class="text-xl font-jakarta-sans">
@@ -265,10 +316,12 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
           <img
             src={fusering_projects_cluster.src}
             alt="Cluster of community keyring projects"
-            class="self-start"
+            class="self-start max-w-full h-auto"
           />
         </div>
-        <div class="flex flex-row gap-8">
+        <div
+          class="flex flex-row flex-wrap justify-center gap-[clamp(1rem,2vw,2rem)]"
+        >
           <CardTwo
             icon="eligible"
             title="Eligibility"
@@ -293,13 +346,15 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
         </div>
       </section>
       <section
-        class="min-h-236.75 flex flex-col gap-32 p-16 justify-center items-center"
+        class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col gap-[clamp(1.5rem,4vw,4rem)] p-[clamp(1.5rem,4vw,4rem)] justify-center items-center"
       >
-        <div class="flex flex-row gap-32">
+        <div
+          class="flex flex-row flex-wrap justify-center min-[1840px]:justify-start gap-[clamp(1.5rem,4vw,4rem)]"
+        >
           <img
             src={fusering_sample_cluster.src}
             alt="Sample keyrings in six filament colours"
-            class="self-start"
+            class="self-start max-w-full h-auto"
           />
           <div class="flex flex-col gap-16">
             <Card>
@@ -317,19 +372,25 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
             <img
               src={print_farm_image_cluster.src}
               alt="Hack Club HQ print farm producing keyrings"
-              class="self-start"
+              class="self-start max-w-full h-auto"
             />
           </div>
         </div>
       </section>
       <footer>
         <div
-          class="flex flex-row w-screen justify-between h-82.5 bg-text-black text-fusering-beige p-16"
+          class="flex flex-row flex-wrap w-full justify-between gap-8 bg-text-black text-fusering-beige p-[clamp(1.5rem,4vw,4rem)]"
         >
-          <div class="grid grid-cols-3 grid-rows-2 w-7xl gap-y-8 gap-x-16">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-3 w-[min(100%,80rem)] gap-y-8 gap-x-[clamp(1rem,3vw,4rem)]"
+          >
             <!--top row -->
             <div class="flex flex-col items-start justify-end">
-              <img src={fusering_logo_footer.src} alt="Fusering logo" />
+              <img
+                src={fusering_logo_footer.src}
+                alt="Fusering logo"
+                class="max-w-full h-auto"
+              />
             </div>
             <div class="flex flex-col items-start justify-end">
               <h2 class="text-4xl font-baloo-2 font-bold flex flex-row gap-4">
@@ -363,7 +424,7 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
           <img
             src={cube_cluster_footer.src}
             alt=""
-            class="self-start"
+            class="self-start max-w-full h-auto"
           />
         </div>
       </footer>
