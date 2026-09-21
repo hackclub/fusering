@@ -13,10 +13,21 @@ const IMAGE_DIR = "public/gallery";
 const MANIFEST_PATH = "src/data/gallery.json";
 
 function loadEnvToken() {
-  const env = readFileSync(".env", "utf8");
-  const match = env.match(/^AIRTABLE_PAT=(.+)$/m);
-  if (!match) throw new Error("AIRTABLE_PAT not found in .env");
-  return match[1].trim();
+  // Hosting platforms (like Orchard) inject dashboard env vars directly into
+  // process.env — there's no .env file on disk in that environment.
+  if (process.env.AIRTABLE_PAT) return process.env.AIRTABLE_PAT;
+
+  // Local dev convenience: fall back to reading .env directly so this script
+  // works without having to `export` the variable by hand first.
+  if (existsSync(".env")) {
+    const env = readFileSync(".env", "utf8");
+    const match = env.match(/^AIRTABLE_PAT=(.+)$/m);
+    if (match) return match[1].trim();
+  }
+
+  throw new Error(
+    "AIRTABLE_PAT not found — set it as an environment variable, or add it to a local .env file."
+  );
 }
 
 async function fetchAllRecords(pat) {
