@@ -1,0 +1,20 @@
+---
+import galleryData from "../data/gallery.json";
+---
+
+<div
+  class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-h-[60vh] overflow-y-auto p-1"
+>
+  {
+    galleryData.map((item) => (
+      <img
+        src={item.path}
+        width={item.width}
+        height={item.height}
+        loading="lazy"
+        alt="Community keyring design"
+        class="w-full aspect-square object-cover rounded-xl border-4 border-black/35"
+      />
+    ))
+  }
+</div>

@@ -5,6 +5,7 @@ import "../styles/global.css";
 import PillOne from "../components/pill_one.astro";
 import Card from "../components/card.astro";
 import CardTwo from "../components/card_two.astro";
+import GalleryGrid from "../components/gallery_grid.astro";
 
 // Images
 import hero_banner from "../assets/hero_banner.png";
@@ -533,7 +534,7 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
 
     <dialog id="gallery_coming_soon_modal" class="modal">
       <div
-        class="modal-box bg-card-beige border-4 border-black/35 rounded-3xl shadow-card"
+        class="modal-box max-w-4xl bg-card-beige border-4 border-black/35 rounded-3xl shadow-card"
       >
         <form method="dialog">
           <button
@@ -542,20 +543,10 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
             ✕
           </button>
         </form>
-        <h3 class="text-4xl font-baloo-2 font-bold">Coming soon!</h3>
-        <p class="text-xl font-jakarta-sans leading-relaxed py-4">
-          The gallery is still under construction. Check back later to see all
-          the designs made by fellow Hack Clubbers!
-        </p>
-        <div class="modal-action">
-          <form method="dialog">
-            <button
-              class="flex flex-row font-baloo-2 rounded-full items-center w-fit shrink-0 p-3 gap-4 bg-fusering-blue border-4 border-black/35 hover:shadow-card"
-            >
-              <p class="text-xl font-semibold whitespace-nowrap">Got it!</p>
-            </button>
-          </form>
-        </div>
+        <h3 class="text-4xl font-baloo-2 font-bold pb-4">
+          Designs made by Hack Clubbers
+        </h3>
+        <GalleryGrid />
       </div>
       <form method="dialog" class="modal-backdrop">
         <button>close</button>

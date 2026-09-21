@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fetch:gallery": "node scripts/fetch-gallery.mjs",
+    "prebuild": "npm run fetch:gallery"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
