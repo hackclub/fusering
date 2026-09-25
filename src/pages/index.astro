@@ -45,18 +45,18 @@ import cube_cluster_footer from "../assets/cube_cluster_footer.png";
 import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
 ---
 
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
     <title>
       Fusering - Design a keyring, we'll ship it to you with stickers!
     </title>
   </head>
-  <body class="bg-card-beige text-text-black font-jakarta-sans">
+  <body class="bg-card-beige text-text-black font-jakarta-sans overflow-x-hidden w-full max-w-full">
     <!--Main -->
     <main class="flex flex-col gap-6 w-full max-w-[2100px] mx-auto">
       <!-- Section 1: hero -->
@@ -74,7 +74,7 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
             <img
               src={logo.src}
               alt="Fusering logo"
-              class="max-w-[30%] h-auto"
+              class="max-w-[40%] md:max-w-[30%] h-auto"
             />
           </div>
         </div>
@@ -124,21 +124,21 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
           class="flex flex-row flex-wrap gap-8 p-[clamp(1rem,3vw,4rem)] justify-center"
         >
           <!-- step 1 -->
-          <div class="flex flex-row items-start gap-8">
+          <div class="flex flex-row items-start gap-4 sm:gap-8 max-w-full">
             <img
               src={step1_icon.src}
               alt=""
-              class="shrink-0 max-w-full h-auto"
+              class="shrink-0 w-10 sm:w-auto h-auto max-w-full"
             />
             <div
-              class="flex flex-col gap-8 w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
+              class="flex flex-col gap-4 sm:gap-8 w-full max-w-[26rem] sm:w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
             >
               <div class="flex flex-col gap-2">
-                <h2 class="text-4xl font-baloo-2 font-bold">
+                <h2 class="text-2xl sm:text-4xl font-baloo-2 font-bold">
                   Prep your artwork.
                 </h2>
                 <p
-                  class="text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
+                  class="text-lg sm:text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
                 >
                   Time to get creative! Create a unique design for the front of
                   your keyring, and turn it into a vector image.
@@ -154,21 +154,21 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
           </div>
 
           <!-- step 2 -->
-          <div class="flex flex-row items-start gap-8">
+          <div class="flex flex-row items-start gap-4 sm:gap-8 max-w-full">
             <img
               src={step2_icon.src}
               alt=""
-              class="shrink-0 max-w-full h-auto"
+              class="shrink-0 w-10 sm:w-auto h-auto max-w-full"
             />
             <div
-              class="flex flex-col gap-8 w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
+              class="flex flex-col gap-4 sm:gap-8 w-full max-w-[26rem] sm:w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
             >
               <div class="flex flex-col gap-2">
-                <h2 class="text-4xl font-baloo-2 font-bold">
+                <h2 class="text-2xl sm:text-4xl font-baloo-2 font-bold">
                   Make your keyring
                 </h2>
                 <p
-                  class="text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
+                  class="text-lg sm:text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
                 >
                   Use the power of onshape, a popular CAD tool, to turn your
                   artwork into a real, 3D printable part.
@@ -184,19 +184,19 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
           </div>
 
           <!-- step 3 -->
-          <div class="flex flex-row items-start gap-8">
+          <div class="flex flex-row items-start gap-4 sm:gap-8 max-w-full">
             <img
               src={step3_icon.src}
               alt=""
-              class="shrink-0 max-w-full h-auto"
+              class="shrink-0 w-10 sm:w-auto h-auto max-w-full"
             />
             <div
-              class="flex flex-col gap-8 w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
+              class="flex flex-col gap-4 sm:gap-8 w-full max-w-[26rem] sm:w-[clamp(13rem,30.7vw-10.3rem,26rem)]"
             >
               <div class="flex flex-col gap-2">
-                <h2 class="text-4xl font-baloo-2 font-bold">Show us!</h2>
+                <h2 class="text-2xl sm:text-4xl font-baloo-2 font-bold">Show us!</h2>
                 <p
-                  class="text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
+                  class="text-lg sm:text-xl font-jakarta-sans font-normal leading-relaxed min-h-[3lh]"
                 >
                   Upload to printables.com and share your design with us! We'll
                   print off your design and throw in a carabiner and exclusive
@@ -214,13 +214,13 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
         </div>
         <!--Unsure where to start -->
         <div
-          class="flex flex-row flex-wrap items-center gap-[clamp(1.5rem,4vw,4rem)] justify-center"
+          class="flex flex-row flex-wrap items-center gap-[clamp(1.5rem,4vw,4rem)] justify-center max-w-full"
         >
           <Card>
-            <div class="flex flex-col gap-8 w-[clamp(18rem,35vw-10rem,32rem)]">
-              <div class="flex flex-row items-center gap-4">
+            <div class="flex flex-col gap-8 w-full max-w-[32rem] sm:w-[clamp(18rem,35vw-10rem,32rem)]">
+              <div class="flex flex-row items-center gap-3 sm:gap-4 flex-wrap">
                 <img src={info_icon.src} alt="" class="max-w-full h-auto" />
-                <h2 class="text-4xl font-baloo-2 font-bold">
+                <h2 class="text-2xl sm:text-4xl font-baloo-2 font-bold">
                   Unsure where to start?
                 </h2>
               </div>
@@ -254,11 +254,11 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
           class="flex flex-row flex-wrap justify-center items-center gap-[clamp(2.5rem,6vw,5rem)]"
         >
           <Card>
-            <div class="flex flex-col w-[clamp(24rem,60vw-24rem,48rem)] gap-8">
-              <h2 class="text-4xl font-baloo-2 font-bold">
+            <div class="flex flex-col w-full max-w-[48rem] sm:w-[clamp(24rem,60vw-24rem,48rem)] gap-8">
+              <h2 class="text-2xl sm:text-4xl font-baloo-2 font-bold">
                 See 150+ designs made by fellow Hack Clubbers
               </h2>
-              <p class="text-xl font-jakarta-sans leading-relaxed">
+              <p class="text-lg sm:text-xl font-jakarta-sans leading-relaxed">
                 Every design started the same way - an idea, plus the tools and
                 support to bring it to life. Learn the basics of CAD by getting
                 hands-on. Unsure what to make? Browse designs by the community
@@ -279,49 +279,49 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
           />
         </div>
         <div
-          class="grid grid-cols-6 min-[1740px]:grid-cols-5 justify-items-center gap-[clamp(1.5rem,3vw,2.5rem)]"
+          class="grid grid-cols-2 sm:grid-cols-5 justify-items-center gap-[clamp(1rem,2vw,2.5rem)] max-w-full"
         >
           <img
             src={project_image_1.src}
             alt="Community keyring design example"
-            class="col-span-2 min-[1740px]:col-span-1 max-w-full h-auto"
+            class="col-span-1 max-w-full h-auto"
           />
           <img
             src={project_image_2.src}
             alt="Community keyring design example"
-            class="col-span-2 min-[1740px]:col-span-1 max-w-full h-auto"
+            class="col-span-1 max-w-full h-auto"
           />
           <img
             src={project_image_3.src}
             alt="Community keyring design example"
-            class="col-span-2 min-[1740px]:col-span-1 max-w-full h-auto"
+            class="col-span-1 max-w-full h-auto"
           />
           <img
             src={project_image_4.src}
             alt="Community keyring design example"
-            class="col-span-2 col-start-2 min-[1740px]:col-span-1 min-[1740px]:col-start-auto max-w-full h-auto"
+            class="col-span-1 max-w-full h-auto"
           />
           <img
             src={project_image_5.src}
             alt="Community keyring design example"
-            class="col-span-2 col-start-4 min-[1740px]:col-span-1 min-[1740px]:col-start-auto max-w-full h-auto"
+            class="col-span-2 sm:col-span-1 max-w-full h-auto"
           />
         </div>
       </section>
       <section
-        class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col gap-[clamp(1.5rem,4vw,4rem)] p-[clamp(1.5rem,4vw,4rem)] justify-center items-center"
+        class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col gap-[clamp(1.5rem,4vw,4rem)] p-[clamp(1.5rem,4vw,4rem)] justify-center items-center max-w-full"
       >
-        <div class="flex flex-row flex-wrap gap-[clamp(2rem,6vw,4rem)]">
-          <div class="flex flex-col gap-8 w-[clamp(24rem,60vw-24rem,48rem)]">
-            <div class="flex flex-row gap-4 items-center">
+        <div class="flex flex-row flex-wrap gap-[clamp(2rem,6vw,4rem)] max-w-full">
+          <div class="flex flex-col gap-8 w-full max-w-[48rem] sm:w-[clamp(24rem,60vw-24rem,48rem)]">
+            <div class="flex flex-row gap-3 sm:gap-4 items-center flex-wrap">
               <img
                 src={fusering_logo_colour_small.src}
                 alt="Fusering logo"
                 class="max-w-full h-auto"
               />
-              <h2 class="text-4xl font-baloo-2 font-bold">Submission rules</h2>
+              <h2 class="text-2xl sm:text-4xl font-baloo-2 font-bold">Submission rules</h2>
             </div>
-            <p class="text-xl font-jakarta-sans">
+            <p class="text-lg sm:text-xl font-jakarta-sans">
               Before you jump straight into designing, let's go over the rules.
               Please make sure that your submission meets all four requirements
               before you get started! <b
@@ -337,7 +337,7 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
           />
         </div>
         <div
-          class="grid grid-cols-1 min-[640px]:grid-cols-2 min-[1780px]:grid-cols-4 justify-items-center gap-[clamp(1rem,2vw,2rem)]"
+          class="grid grid-cols-1 min-[640px]:grid-cols-2 min-[1780px]:grid-cols-4 justify-items-center gap-[clamp(1rem,2vw,2rem)] max-w-full"
         >
           <CardTwo
             icon="eligible"
@@ -363,22 +363,22 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
         </div>
       </section>
       <section
-        class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col gap-[clamp(1.5rem,4vw,4rem)] p-[clamp(1.5rem,4vw,4rem)] justify-center items-center"
+        class="min-h-[clamp(20rem,40vw,59.1875rem)] flex flex-col gap-[clamp(1.5rem,4vw,4rem)] p-[clamp(1.5rem,4vw,4rem)] justify-center items-center max-w-full"
       >
         <div
-          class="flex flex-row flex-wrap justify-center min-[1840px]:justify-start gap-[clamp(1.5rem,4vw,4rem)]"
+          class="flex flex-row flex-wrap justify-center min-[1840px]:justify-start gap-[clamp(1.5rem,4vw,4rem)] max-w-full"
         >
           <img
             src={fusering_sample_cluster.src}
             alt="Sample keyrings in six filament colours"
             class="self-start max-w-full h-auto"
           />
-          <div class="flex flex-col gap-16">
+          <div class="flex flex-col gap-16 max-w-full">
             <Card>
-              <h2 class="text-4xl font-baloo-2 font-bold">
+              <h2 class="text-2xl sm:text-4xl font-baloo-2 font-bold">
                 Six awesome colour to choose from!
               </h2>
-              <p class="text-xl font-jakarta-sans leading-relaxed max-w-3xl">
+              <p class="text-lg sm:text-xl font-jakarta-sans leading-relaxed max-w-3xl">
                 Choose from six different filament options, or mix and match
                 with multi-colour printing! Most designs are printed in house
                 and shipped from Hack Club HQ! Are you a club leader running a
@@ -394,44 +394,44 @@ import clubs_portal_screenshot from "../assets/clubs_portal_screenshot.png";
           </div>
         </div>
       </section>
-      <footer>
+      <footer class="max-w-full">
         <div
-          class="flex flex-row flex-wrap w-full justify-between gap-8 bg-text-black text-fusering-beige p-[clamp(1.5rem,4vw,4rem)]"
+          class="flex flex-row flex-wrap w-full justify-between gap-8 bg-text-black text-fusering-beige p-[clamp(1.5rem,4vw,4rem)] max-w-full"
         >
           <div
-            class="grid grid-cols-1 sm:grid-cols-3 w-[min(100%,80rem)] gap-y-8 gap-x-[clamp(1rem,3vw,4rem)]"
+            class="grid grid-cols-1 sm:grid-cols-3 w-[min(100%,80rem)] gap-y-8 gap-x-[clamp(1rem,3vw,4rem)] max-w-full"
           >
             <!--top row -->
-            <div class="flex flex-col items-start justify-end">
+            <div class="flex flex-col items-start justify-end max-w-full">
               <img
                 src={fusering_logo_footer.src}
                 alt="Fusering logo"
                 class="max-w-full h-auto"
               />
             </div>
-            <div class="flex flex-col items-start justify-end">
+            <div class="flex flex-col items-start justify-end max-w-full">
               <h2 class="text-4xl font-baloo-2 font-bold flex flex-row gap-4">
                 A <img src={hc_logo_footer.src} alt="Hack Club logo" /> YSWS
               </h2>
             </div>
-            <div class="flex flex-col items-start justify-end">
+            <div class="flex flex-col items-start justify-end max-w-full">
               <h2 class="text-4xl font-baloo-2 font-bold">Resources</h2>
             </div>
             <!-- bottom row -->
-            <div>
-              <p class="font-jakarta-sans text-xl">
+            <div class="max-w-full">
+              <p class="font-jakarta-sans text-base sm:text-xl">
                 Fusering V2 is sponsored by David on the YSWS team. Fusering is
                 clubs friendly! To apply to run a workshop, please check out the
                 clubs portal.
               </p>
             </div>
-            <div>
-              <p class="font-jakarta-sans text-xl">
+            <div class="max-w-full">
+              <p class="font-jakarta-sans text-base sm:text-xl">
                 Built for teens, by teens. A 501(C)(3) non profit, EIN:
                 81-2908499. Check out our GitHub, Slack, and HCB.
               </p>
             </div>
-            <div class="flex flex-col font-jakarta-sans text-xl">
+            <div class="flex flex-col font-jakarta-sans text-base sm:text-xl max-w-full">
               <a
                 href="https://forms.hackclub.com/bounty"
                 class="hover:underline">Fulfilment bounty</a
